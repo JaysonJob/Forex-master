@@ -287,7 +287,7 @@ Range x vs Normal     = DIVIDE([Avg Range Event Days], [Avg Range Normal Days])
 
 #### Page 4: Insights and Recommendations
 
-![Insights and recommendations page](images/dashboard_4_insights_recommendations.png)
+![Alt text](https://github.com/JaysonJob/Forex-master/blob/9e9238d5c4963e626d44a6dbe62d0c2f848849fd/screenshots/insights%20and%20recomendations.png)
 *Goal: turn the results into five insights and five actions.*
 
 **What it shows:** the main insights are that Bitcoin pays most and hurts most, gold is the steadier performer, news days are wider but not wilder by the close, there is no reliable direction on news days, and the assets rarely move together. The recommendations are to allow more room on news days, not to trade a direction from the news alone, to size Bitcoin for its worst case, to use gold as the steady core, and to test hourly data and forecast surprises next.
