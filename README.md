@@ -69,12 +69,15 @@ Each hypothesis below was tested with SQL.A hypothesis does not have to be true:
 
 4. **Create the views and run the analysis.** Run `sql/02_views.sql`, then `sql/03_analysis.sql` one query at a time. The row count should be **11,375**.
 
-5. **Open the Power BI report** (`powerbi/power_bi.pbix`):
+   in the screenshot below left side you can see the 4 views generated
+6. ![alt text](https://github.com/JaysonJob/Forex-master/blob/c4b75b23c310d6db81df184d6186e07cfb73b4c8/screenshots/views.png)
+
+7. **Open the Power BI report** (`powerbi/power_bi.pbix`):
    - **Offline (Power BI Desktop):** open the file. If it asks for credentials or can't find the data, go to *Home > Transform data > Data source settings > Change Source*, enter server `localhost:5432` and your database name, then enter your PostgreSQL username and password on the *Database* tab and click **Refresh**.
    - **Online (Power BI Service, app.powerbi.com):** sign in, open a workspace, choose *Upload > Browse this computer* and select the `.pbix`. The report opens with the data saved in the file. Refreshing it from a local PostgreSQL database needs an on-premises data gateway.
    - **No PostgreSQL or Power BI installed?** Look at the screenshots in `screenshots/`.
 
-6. *(Optional)* **Pull fresh data.** Set your key as an environment variable, then run the two scripts (they also work as Jupyter notebooks). Never write the key into a script or notebook.
+8. *(Optional)* **Pull fresh data.** Set your key as an environment variable, then run the two scripts (they also work as Jupyter notebooks). Never write the key into a script or notebook.
    ```bash
    pip install -r requirements.txt
    setx FRED_API_KEY "your_32_character_key"        # Windows
