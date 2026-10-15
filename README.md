@@ -142,7 +142,7 @@ Each day is labelled `NFP`, `CPI`, `FOMC`, `CPI, FOMC` (both on one day) or `Non
 **The answer:** 11,375 rows (AUDCAD 2,605, BTCUSD 3,653, EURAUD 2,603, XAUUSD 2,514), 0 nulls, 0 duplicates, 0 impossible candles. The data is safe to analyse.
 
 #### 3b. Four views that feed Power BI (`02_views.sql`)
-![Alt text](https://github.com/JaysonJob/Forex-master/blob/4f09ab80f47ba3f09e54d79ca05ce5a213e7c9d2/screenshots/loading%20the%20table.png)
+![Alt text](https://github.com/JaysonJob/Forex-master/blob/1ce52934a467d58f99aec0a471e57f971ce6a5db/screenshots/views.png)
 | View | Content |
 |---|---|
 | `vw_daily_metrics` | One row per asset per day, with `range_pct` (high-to-low range as % of the open) and `ret_pct` (close vs previous close) |
