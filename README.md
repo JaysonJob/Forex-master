@@ -44,7 +44,7 @@ Each hypothesis below was tested with SQL.A hypothesis does not have to be true:
 | Data collection | Python, `requests`, `yfinance`, **FRED API** (Federal Reserve Bank of St. Louis), Jupyternotebook |
 | Storage and analysis | PostgreSQL, pgAdmin (SQL: window functions, CTEs, views) |
 | Visualisation | Power BI Desktop (DAX measures, data model) |
-![Alt text](screen
+![Alt text](https://github.com/JaysonJob/Forex-master/blob/5dcc45917f63ca987a7a25a3bfb8ec4f6fff3098/screenshots/api.png)
 ---
 
 ## Setup / installation
