@@ -112,7 +112,7 @@ An **API** is a public window a website offers: you send a request with some par
 *Goal: call the FRED API for every NFP and CPI release date in the window. Result: NFP 122 dates, CPI 126 dates, FOMC 81 dates.*
 
 ### Step 2: Check, clean and merge (`python/02_check_and_merge.py`)
-
+![alt text](https://github.com/JaysonJob/Forex-master/blob/e1be2df696dc07fdfd6c506b162545131a34b942/screenshots/getting%20data%20in%20python.png)
 The raw files stay untouched. The second script checks them, fixes what it finds, and merges them into **one table** with a single `event_name` column.
 
 ![Data quality checks in Python](images/python_data_checks.png)
