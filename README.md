@@ -1,15 +1,11 @@
 # Forex-master
 Forex analysis from October 10th 2016 to October 10th 2026 
-# Do US News Days Move Gold, Bitcoin and Forex? A 10-Year Data Analysis
 
 **Python (API) → CSV → PostgreSQL → Power BI**
 
 A trading desk wants to know whether it should treat big US news days differently. This project tests whether the **NFP jobs report, CPI inflation and Federal Reserve FOMC decisions** make four markets move more: **gold (XAUUSD), Bitcoin (BTCUSD), AUDCAD and EURAUD**. It covers **10 years of daily data (10 Oct 2016 to 10 Oct 2026) and 11,375 trading days**.
 
-> **Real data, not simulated.** The NFP and CPI release dates are pulled from the **FRED API**, run by the **Federal Reserve Bank of St. Louis** ([api.stlouisfed.org](https://fred.stlouisfed.org/docs/api/fred/)). Daily prices come from Yahoo Finance (`yfinance`; gold is the COMEX gold futures series, `GC=F`, used as a proxy for spot gold), and the FOMC meeting dates come from the Federal Reserve's published meeting calendar.
->
-> *This is an analysis exercise, not financial advice. Past performance does not predict future results.*
-
+> **Real data,not simulated.** The NFP and CPI release dates are pulled from the **FRED API**, run by the **Federal Reserve Bank of St. Louis** ([api.stlouisfed.org](https://fred.stlouisfed.org/docs/api/fred/)). Daily prices come from Yahoo Finance (`yfinance`; gold is the COMEX gold futures series, `GC=F`, used as a proxy for spot gold), and the FOMC meeting dates come from the Federal Reserve's published meeting calendar.
 ---
 
 ## Contents
@@ -27,7 +23,7 @@ A trading desk wants to know whether it should treat big US news days differentl
 
 ## Business questions and hypotheses
 
-Each hypothesis below was tested with SQL. A hypothesis does not have to be true: the data decides.
+Each hypothesis below was tested with SQL.A hypothesis does not have to be true: the data decides.
 
 | # | Hypothesis | Verdict | Evidence |
 |---|---|---|---|
@@ -45,8 +41,7 @@ Each hypothesis below was tested with SQL. A hypothesis does not have to be true
 
 | Layer | Tools |
 |---|---|
-| Data collection | Python, `requests`, `yfinance`, **FRED API** (Federal Reserve Bank of St. Louis), Jupyter (optional) |
-| Cleaning | Python (`pandas`) |
+| Data collection | Python, `requests`, `yfinance`, **FRED API** (Federal Reserve Bank of St. Louis), Jupyternotebook |
 | Storage and analysis | PostgreSQL, pgAdmin (SQL: window functions, CTEs, views) |
 | Visualisation | Power BI Desktop (DAX measures, data model) |
 
@@ -67,7 +62,7 @@ Each hypothesis below was tested with SQL. A hypothesis does not have to be true
    git clone https://github.com/YOUR_USERNAME/forex-news-impact-analysis.git
    ```
 
-2. **Create a database.** In pgAdmin, right-click *Databases > Create > Database*, name it `forex`, and open its Query Tool. (The `.pbix` was built on the default `postgres` database. If you create your own, point Power BI at it in step 5.)
+2. **Create a database.** In pgAdmin, right-click *Databases > Create > Database*, name it `forex_master`and open its Query Tool. (The `.pbix` was built on the default `postgres` database. If you create your own, point Power BI at it in step 5.)
 
 3. **Load the data.** Pick one option:
    - **Option A, one step:** open and run `sql/00_one_step_setup.sql`. It creates the schema `forex_cascade`, the table `forex_master`, and loads all 11,375 rows. No CSV import is needed.
@@ -78,7 +73,7 @@ Each hypothesis below was tested with SQL. A hypothesis does not have to be true
 5. **Open the Power BI report** (`powerbi/power_bi.pbix`):
    - **Offline (Power BI Desktop):** open the file. If it asks for credentials or can't find the data, go to *Home > Transform data > Data source settings > Change Source*, enter server `localhost:5432` and your database name, then enter your PostgreSQL username and password on the *Database* tab and click **Refresh**.
    - **Online (Power BI Service, app.powerbi.com):** sign in, open a workspace, choose *Upload > Browse this computer* and select the `.pbix`. The report opens with the data saved in the file. Refreshing it from a local PostgreSQL database needs an on-premises data gateway.
-   - **No PostgreSQL or Power BI installed?** Look at the screenshots in `images/`.
+   - **No PostgreSQL or Power BI installed?** Look at the screenshots in `screenshots/`.
 
 6. *(Optional)* **Pull fresh data.** Set your key as an environment variable, then run the two scripts (they also work as Jupyter notebooks). Never write the key into a script or notebook.
    ```bash
@@ -367,6 +362,6 @@ Prices are in different currencies, so the analysis compares **returns**, never 
 
 ## Author
 
-*Your name* · [LinkedIn](#) · [Portfolio](#)
+*Jayson Kibet* · [https://www.linkedin.com/in/jayson-kibet-/](#) 
 
 *Data sources: Federal Reserve Bank of St. Louis, FRED® API (NFP and CPI release dates); Yahoo Finance (prices); Federal Reserve Board (FOMC meeting calendar).*
