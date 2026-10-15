@@ -253,6 +253,8 @@ Each day is labelled `NFP`, `CPI`, `FOMC`, `CPI, FOMC` (both on one day) or `Non
 ### Step 4: Power BI report (`powerbi/power_bi.pbix`)
 
 **Connection and model.** Power BI connects to PostgreSQL (*Get data > PostgreSQL database*, server `localhost:5432`, schema `forex_cascade`, **Import** mode) and loads the four views as separate tables (the `vw_daily_metrics` query is named `fact table`). Two lookup tables link them: `dim_symbol` (one row per asset) and `dim_date` (one row per day).
+I then merged them together using left outer join to generate relationships as shown below
+![Alt text](https://github.com/JaysonJob/Forex-master/blob/3ba1a39bf808a1dbd3ec95e408fbdb5800d96b7e/screenshots/relationships.png)
 
 ```dax
 dim_symbol = DISTINCT('fact table'[symbol])
