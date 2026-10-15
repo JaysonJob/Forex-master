@@ -266,7 +266,7 @@ Range x vs Normal     = DIVIDE([Avg Range Event Days], [Avg Range Normal Days])
 
 #### Page 1: Executive Report
 
-![Executive report page](images/dashboard_1_executive_report.png)
+![Alt text](https://github.com/JaysonJob/Forex-master/blob/07f48a873c3e7b3a319be5bfa8cf8d70a7391806/screenshots/executive%20report.png)
 *Goal: a one-page summary for a reader who has two minutes.*
 
 **What it shows:** the report looks at ten years of gold, Bitcoin, AUDCAD and EURAUD and asks whether big US news days make them move more. Bitcoin returned +12,833% but fell 83% at its worst, while gold returned +237% with a worst fall of 25%. News days have 12% to 15% wider daily ranges for gold, Bitcoin and AUDCAD, but there is no reliable direction to trade on and the closing move is not reliably larger.
