@@ -280,7 +280,7 @@ Range x vs Normal     = DIVIDE([Avg Range Event Days], [Avg Range Normal Days])
 
 #### Page 3: Risk and Events dashboard
 
-![Risk and events dashboard](images/dashboard_3_risk_and_events.png)
+![Alt text](https://github.com/JaysonJob/Forex-master/blob/0ea446e13f975fc680f3e6ca64f62a5e086c84dd/screenshots/event%20and%20risk%20dashboard.png)
 *Goal: show how each asset reacts to each type of news.*
 
 **What it shows:** the event charts compare the daily range on event days with normal days. Gold (1.52% vs 1.32%), Bitcoin (4.93% vs 4.34%) and AUDCAD (0.69% vs 0.62%) are wider on event days, while EURAUD is unchanged. Gold's biggest reaction is to FOMC (1.21x) and NFP (1.18x). The win-rate view shows most results between 49% and 59%, with the extremes (59% for Bitcoin on FOMC days, 40% for AUDCAD on NFP days) resting on 80 to 126 days, so there is no dependable direction.
