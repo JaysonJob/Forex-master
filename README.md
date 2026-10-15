@@ -273,7 +273,7 @@ Range x vs Normal     = DIVIDE([Avg Range Event Days], [Avg Range Normal Days])
 
 #### Page 2: Analysis dashboard
 
-![Analysis dashboard](images/dashboard_2_analysis.png)
+![Alt text](https://github.com/JaysonJob/Forex-master/blob/faa0f9192eaac4b033c411705dfbe36c7b2f4e7e/screenshots/analysis%20dashboard.png)
 *Goal: an overview of the dataset, with event-day counts, volatility over time and drawdowns.*
 
 **What it shows:** the cards confirm 11,375 trading days and the event days: **126 CPI, 122 NFP and 81 FOMC** (six days carry both CPI and FOMC). The volatility lines show Bitcoin's 30-day volatility averaging about 3.2% a day, gold's about 1.0% and the currency pairs' below 0.5%. The drawdown lines show that Bitcoin's falls are far deeper than the others (-83% at its low in December 2018, against -25% for gold, -24% for EURAUD and -20% for AUDCAD).
