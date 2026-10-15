@@ -134,7 +134,7 @@ Each day is labelled `NFP`, `CPI`, `FOMC`, `CPI, FOMC` (both on one day) or `Non
 
 ![SQL data checks](images/sql_data_checks.png)
 *Example query: row count, nulls, duplicates and impossible candles per asset.*
-
+![alt text'(https://github.com/JaysonJob/Forex-master/blob/4f09ab80f47ba3f09e54d79ca05ce5a213e7c9d2/screenshots/loading%20the%20table.png)
 **The question:** before analysing anything, the team wants to know whether the load is complete and clean.
 **The query** counts rows per asset, counts empty cells, looks for duplicate days and for candles where the high is below the low.
 **The answer:** 11,375 rows (AUDCAD 2,605, BTCUSD 3,653, EURAUD 2,603, XAUUSD 2,514), 0 nulls, 0 duplicates, 0 impossible candles. The data is safe to analyse.
